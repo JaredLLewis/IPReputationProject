@@ -179,28 +179,28 @@ function showCensys() {
 <?php 
 
 //VirusTotal Report
-require_once('VirusTotal\IPAddress.php');
+require_once('VirusTotal/IPAddress.php');
 
 echo "<br><br>";
 
 //MyIP.MS Report
-require_once('MyIP\myIPFormat.php');
+require_once('MyIP/myIPFormat.php');
 echo "<br><br>";
 
 //Apility.io Report
-require_once('Apility\ApilityIPFormat.php');
+require_once('Apility/ApilityIPFormat.php');
 echo "<br><br>";
 
 //AbuseIPDB Report
-require_once('AbuseIPDB\ABuseIPDBFormat.php');
+require_once('AbuseIPDB/ABuseIPDBFormat.php');
 echo "<br><br>";
 
 //Shodan Report
-require_once('Shodan\ShodanFormat.php');
+require_once('Shodan/ShodanFormat.php');
 echo "<br><br>";
 
 //Censys Report
-require_once('Censys\CensysFormat.php');
+require_once('Censys/CensysFormat.php');
 
 
 ?>

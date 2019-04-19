@@ -8,7 +8,7 @@ $stringValidation="";
 if($check=="url")
 {   
     //Calling the VirusTotal
-	require_once('VirusTotal\FastCheckVirusTotal.php');
+	require_once('VirusTotal/FastCheckVirusTotal.php');
 
 
 	//memorise the total # of Hits and Checks
@@ -24,19 +24,19 @@ if($check=="url")
 else if($check=="ip")
 {
 	//VirusTotal Report
-	require_once('VirusTotal\FastCheckVirusTotal.php'); 
+	require_once('VirusTotal/FastCheckVirusTotal.php'); 
 	$totalHitsVirusTotal=(int)$hits;
 
 	//MyIP.MS Report
-	require_once('MyIP\FastCheckMyIP.php');
+	require_once('MyIP/FastCheckMyIP.php');
 	$hitsMyIP=$blacklist;
 
 	//Apility.io Report
-	require_once('Apility\ApilityIPFastCheck.php');
+	require_once('Apility/ApilityIPFastCheck.php');
 	$hitsApility=$blacklistApility;
 
 	//AbuseIPDB Report
-	require_once('AbuseIPDB\ABuseIPDBFastCheck.php');
+	require_once('AbuseIPDB/ABuseIPDBFastCheck.php');
 	
 	$hitsAbuse=$blacklistAbuse;
 	
@@ -64,11 +64,11 @@ else if($check=="ip")
 else if($check=="domain")
 {
 	//VirusTotal Report
-	require_once('VirusTotal\FastCheckVirusTotal.php'); 
+	require_once('VirusTotal/FastCheckVirusTotal.php'); 
 	$totalHitsVirusTotal=(int)$hits;
 	
 	//Apility.io Report
-	require_once('Apility\ApilityDomainFastCheck.php');
+	require_once('Apility/ApilityDomainFastCheck.php');
 	$hitsApility=(int)$score; //negative score means that is not safe
 	
 	
