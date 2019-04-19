@@ -15,7 +15,7 @@
 
   echo "<font color=\"black\"> <center>Domain Used: ", $query, "</center> </font>";
   echo "<br><br>";
-  $command = escapeshellcmd('MachineLearning\src\iplearning\runner2.py \"$query\"');
+  $command = escapeshellcmd('MachineLearning\src\iplearning\python -W ignore runner2.py \"$query\"');
   
   $output = shell_exec($command);
   echo "<font color=\"black\"><center>", $output, "</center> </font>";
