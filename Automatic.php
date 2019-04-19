@@ -12,7 +12,7 @@
 
 
 
-$database = new SQLite3('scheduleddb\_main.db_');
+$database = new SQLite3('scheduleddb/_main.db_');
 $virustotalscan1 = 0;
 $abuseipscan1 = 0;
 $apilityscan1 = 0;

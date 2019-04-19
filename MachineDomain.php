@@ -19,7 +19,7 @@
 
   echo "<font color=\"black\"> <center>Domain Used: ", $query, "</center> </font>";
   echo "<br><br>";
-  $command = escapeshellcmd('MachineLearning\src\runner.py \"$query\"');
+  $command = escapeshellcmd('MachineLearning/src/runner.py \"$query\"');
   
   $output = shell_exec($command);
   echo "<font color=\"black\"><center>", $output, "</center> </font>";

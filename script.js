@@ -1,7 +1,9 @@
 jQuery(document).ready(function($) {
 	tab = $('.tabs h3 a');
+	
 
 	tab.on('click', function(event) {
+		alert("test");
 		event.preventDefault();
 		tab.removeClass('active');
 		$(this).addClass('active');

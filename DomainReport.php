@@ -115,11 +115,11 @@ function showApility() {
   echo "<br><br>";
   
   //myIp Report
-  require_once('MyIP\myIPDomainFormat.php');
+  require_once('MyIP/myIPDomainFormat.php');
   echo "<br>";
   
   //Apility Report
-  require_once('Apility\ApilityDomainFormat.php');
+  require_once('Apility/ApilityDomainFormat.php');
   echo "<br>";
 
 ?>

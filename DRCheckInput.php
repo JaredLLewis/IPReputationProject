@@ -29,7 +29,7 @@ else
 		else
 		{
 			$check="invalid";
-			header("Location: IPReputationMain.html?error");
+			header("Location: index.php?error");
 		}
    
 	}
