@@ -9,7 +9,7 @@
 <br><br><br>
 <h1><center>Automated IP Reputation Analyzer</center></h1>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="controlTabs.js"></script>
 <div class="form-wrap">
 		<div class="tabs">
 			<h3 class="home-tab"><a class="active" href="#home-tab-content">Home</a></h3>
