@@ -96,12 +96,12 @@ else if($check=="invalid")
 
 ?>
 <link rel="stylesheet" href="TabDesign.css" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <style>
 
 </style>
 <html>
 <head>
+<script src="jquery-3.4.0.min.js"></script>
 <title>Automated IP Reputation Analyzer</title>
 </head>
 
@@ -109,7 +109,7 @@ else if($check=="invalid")
 <br><br><br>
 <h1><center>Automated IP Reputation Analyzer</center></h1>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="controlTabs.js"></script>
 <div class="form-wrap">
 		<div class="tabs">
 			<h3 class="home-tab"><a class="active" href="#home-tab-content">Home</a></h3>
