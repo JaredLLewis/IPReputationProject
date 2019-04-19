@@ -1,8 +1,11 @@
+alert("bef");
 jQuery(document).ready(function($) {
+	alert("READY");
 	tab = $('.tabs h3 a');
 	
 
 	tab.on('click', function(event) {
+		alert("Click here");
 		
 		
 		event.preventDefault();
