@@ -5,7 +5,6 @@ import random
 from sklearn.externals import joblib
 import sys
 
-reload(sys)  
 sys.setdefaultencoding('utf8')
 
 
