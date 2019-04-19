@@ -97,7 +97,7 @@ function showApility() {
 </script>
 <html>
 <body style="color: black;background-color: #f1f2f2">
-<button onclick="window.location.href='IPReputationMain.html'" class="button">Home Page</button>
+<button onclick="window.location.href='index.php'" class="button">Home Page</button>
 <font color="black" size="10" face="algerian"><center>Domain Report<br></center></font>
 <ul>
   <li><a onclick="showMyIP()" id="myIPButton">MyIP</a></li>
