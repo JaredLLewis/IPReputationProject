@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="TabDesign.css" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <html>
 <head>
+
+<script src="jquery-3.4.0.min.js"></script>
+
 <title>Automated IP Reputation Analyzer</title>
 </head>
 
