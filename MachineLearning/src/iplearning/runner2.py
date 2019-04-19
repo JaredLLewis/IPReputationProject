@@ -5,6 +5,10 @@ import random
 from sklearn.externals import joblib
 import sys
 
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
+
 # Machine Learning Packages
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
