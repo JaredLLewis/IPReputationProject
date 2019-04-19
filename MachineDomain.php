@@ -6,7 +6,7 @@
 <html>
 <body style="color: black;background-color: #f1f2f2">
 
-<?php phpinfo(); ?>
+
 
 <?php
   echo '<font color="black" size="10" face="algerian"><center>Machine Learning Domain Report<br></center></font>';
