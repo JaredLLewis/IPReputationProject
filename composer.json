@@ -1,6 +1,3 @@
 {
-  "require": {
-    "ext-pdo_sqlite": "*"
-  }
 
 }
