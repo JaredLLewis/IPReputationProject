@@ -1,0 +1,87 @@
+
+<!-- This code creates the main page -->
+<!-- Author: Geanina F. Tambaliuc-->
+<link rel="stylesheet" href="NewPageDesign2.css" type="text/css">
+<link rel="stylesheet" href="PageFormat.css" type="text/css">
+
+
+
+<div class="vid-container">
+  <img class="bgvid"
+      <source src="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg">
+  />
+  <div class="inner-container">
+    <img class="bgvid inner"        src="https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg"
+    />
+    <div class="box">
+	
+	
+	
+<div class="urlCheck">
+	<h1>URL / IP Reputation</h1>
+	<hr>
+	<!-- Creating the form for URL Fast Check -->
+	<h2>URL Fast Check</h2>
+    <form method="get" action="URLFastScan.php" target="_blank">
+    	<input type="text" name="url" placeholder="Ex:https://www.google.com/ " required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+		<h4><center>Databases:VirusTotal</center></h4>
+    </form>
+	
+	<!-- Creating the form for URL Detailed Report -->
+	<h2>URL Detailed Report</h2>
+    <form method="get" action="URLDetailedRep.php" target="_blank">
+    	<input type="text" name="url" placeholder="Ex:https://www.google.com/ " required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large" >Check</button>
+		<h4><center>Databases:VirusTotal</center></h4>
+    </form>
+	
+	<!-- Creating the form for IP Report -->
+	<h2>IP Report</h2>
+    <form method="get" action="IPAddress.php" target="_blank">
+    	<input type="text" name="ip" placeholder="Ex:206.212.0.79 " required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+		<h4><center>Databases:VirusTotal, MyIP.MS, Apility, 
+		<br>AbuseIPDB, Shodan, Censys</center></h4>
+    </form>
+	
+	<!-- Creating the form for Domain Report -->
+	<h2>Domain Report</h2>
+    <form method="get" action="DomainReport.php" target="_blank">
+    	<input type="text" name="domain" placeholder="Ex:google.com " required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+		<h4><center>Databases:MyIP.MS, Apility</center></I></font>
+    </form>
+	
+	<!-- Creating the connection to the History Reputation-->
+	<h2>History for Private IPs</h2>
+    <form action="Automatic.php" target="_blank">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+		<h4><center>Database:AbuseIPDB,MyIP.MS,
+		<br>VirusTotal,Apility,Shodan</center></h4>
+    </form>
+	<!-- Creating the connection to machine learning(alpha)-->
+	<h2>Check Domain Against Machine Learning</h2>
+    <form action="MachineDomain.php" target="_blank"> 
+		<input type="text" name="ip" placeholder="Ex:google.com " required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+		<h4><center>Database:Private</center></h4>
+    </form>
+		<h2>Check IP Against Machine Learning</h2>
+    <form action="MachineIP.php" target="_blank"> 
+		<input type="text" name="ip" placeholder="Ex:8.8.8.8 " required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+		<h4><center>Database:Private</center></h4>
+    </form>
+	
+	
+	
+	<!-- Creating the page footer -->
+	<h3><center> Authors: Geanina Florentina Tambaliuc <br>
+	Jared Lee Lewis <br>
+	Made with: VirusTotal (Andreas Breitschopp), UrlVoid, Shodan, MyIP.MS, Censys, Apility.io, AbuseIPDB, Codepen.io
+	</h3>
+</div>
+</div>
+  </div>
+</div>
