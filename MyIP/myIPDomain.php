@@ -4,6 +4,24 @@
 
 	//get the domain to check
 	$query 	= $_GET["domain"];
+	
+	
+	// in case scheme relative URI is passed, e.g., //www.google.com/
+$query = trim($query, '/');
+
+// If scheme not included, prepend it
+if (!preg_match('#^http(s)?://#', $query)) {
+    $query = 'http://' . $query;
+}
+
+$urlParts = parse_url($query);
+
+// remove www
+$domain = preg_replace('/^www\./', '', $urlParts['host']);
+
+$query = $domain;
+	
+	
 
 	// API Details  
 	$api_id = "id53784";

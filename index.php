@@ -27,7 +27,7 @@
 					<input type="submit" class="button" value="Detailed Report" onclick="f1.action='DRCheckInput.php';  return true;">
 				</form><!--.home-form-->
 				<div class="help-text">
-					<p>Authors: Geanina Florentina Tambaliuc, Jared Lee Lewis <br>
+					<p>Authors: Husnu Narman, Wook-Sung Yoo, Geanina Florentina Tambaliuc, Jared Lee Lewis <br>
 					Made with: VirusTotal, Shodan, MyIP.MS, Censys, Apility.io, AbuseIPDB, Codepen.io</p>
 				</div><!--.author-text-->
 			</div><!--.home-tab-content-->

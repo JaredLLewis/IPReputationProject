@@ -5,11 +5,28 @@
 $curl = curl_init();
 
 //get the domain 
-$domain=$input;
+$query=$input;
+$query = trim($query, '/');
+
+// If scheme not included, prepend it
+if (!preg_match('#^http(s)?://#', $query)) {
+    $query = 'http://' . $query;
+}
+
+$urlParts = parse_url($query);
+
+// remove www
+$domain = preg_replace('/^www\./', '', $urlParts['host']);
+
+$query = $domain;
+
+
+
+
 
 //make the connection
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.apility.net/baddomain/".$domain,
+  CURLOPT_URL => "https://api.apility.net/baddomain/".$query,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
