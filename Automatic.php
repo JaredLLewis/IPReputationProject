@@ -11,11 +11,11 @@
 <?php 
 echo "HELLO";
 
-include '.env';
 $username = getenv('USER');
 $password = getenv('PASS');
-echo "big";
+echo "whaatttt";
 echo $username;
+echo "whatttt";
 echo $password;
 $servername = "us-cdbr-iron-east-02.cleardb.net";
 
