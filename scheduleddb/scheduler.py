@@ -309,10 +309,6 @@ def doWork(ip):
        
     
     
-    conn.commit()
-    c.execute("SELECT * FROM IP1")
-    rows = c.fetchall()
-    print(rows)
     
     
     
@@ -329,4 +325,4 @@ time.sleep(25)
 doWork("129.71.252.10")
 
 
-conn.close()
+con.close()
