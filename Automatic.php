@@ -9,7 +9,6 @@
 
 
 <?php 
-echo "HELLO";
 
 $username = getenv('USERNAME');
 $password = getenv('PASS');
