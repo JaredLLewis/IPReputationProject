@@ -1,6 +1,5 @@
 {
   "require": {
-    "ext-mysqli": "*",
-    "csanquer/pdo-service-provider": "~1.1dev"
+    "ext-mysqli": "*"
   }
 }
