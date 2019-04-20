@@ -9,10 +9,34 @@
 
 
 <?php 
+echo "HELLO";
+
+include '.env';
+$username = getenv('USER');
+$password = getenv('PASS');
+echo "big";
+echo $username;
+echo $password;
+$servername = "us-cdbr-iron-east-02.cleardb.net";
+
+// Create connection
+
+
+$dbname = "heroku_d2727727c391dd6";
+$database = new mysqli($servername, $username, $password,$dbname);
+
+// Check connection
+if ($database->connect_error) {
+    die("Connection failed: " . $database->connect_error);
+} 
+echo "Connected successfully";
 
 
 
-$database = new SQLite3('scheduleddb/_main.db_');
+
+
+
+#$database = new SQLite3('scheduleddb/_main.db_');
 $virustotalscan1 = 0;
 $abuseipscan1 = 0;
 $apilityscan1 = 0;
@@ -25,9 +49,7 @@ else {
 	$maxdaycount = 30;
 }
 
-$sql =<<<EOF
-      SELECT * from IP1 ORDER  BY scandate DESC;
-EOF;
+
 ?>
 
 <form action="Automatic.php" method="get" style="margin-left:80px;">
@@ -60,8 +82,14 @@ Days: <input type="text" name="name" style="width:100px;" value="<?php echo html
 	echo "<B>MyIP</B>";
 	echo "</td></tr>";
 	
-   $ret = $database->query($sql);
-   while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+	$sql =    "SELECT * from IP1 ORDER  BY scandate DESC;";
+	
+	if (!$result = $database->query($sql)) {
+    die ('There was an error running query[' . $database->error . ']');
+}
+
+
+   while($row = $result->fetch_array()) {
 	  echo "<tr><td style=\"word-wrap: break-word\"  ><font color=\"black\">";
       echo $row['scandate'];
 	  echo "</font></td>";
@@ -145,8 +173,12 @@ EOF;
 	
 	echo "</td></tr>";
 	
-   $ret = $database->query($sql);
-   while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+	if (!$result = $database->query($sql)) {
+    die ('There was an error running query[' . $database->error . ']');
+}
+
+
+   while($row = $result->fetch_array()) {
 	  echo "<tr><td style=\"word-wrap: break-word\"  ><font color=\"black\">";
       echo $row['scandate'];
 	  echo "</font></td>";
@@ -263,8 +295,12 @@ EOF;
 	echo "<B>MyIP</B>";
 	echo "</td></tr>";
 
-   $ret = $database->query($sql);
-   while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+	if (!$result = $database->query($sql)) {
+    die ('There was an error running query[' . $database->error . ']');
+}
+
+
+   while($row = $result->fetch_array()) {
 	  echo "<tr><td style=\"word-wrap: break-word\"  ><font color=\"black\">";
       echo $row['scandate'];
 	  echo "</font></td>";
@@ -345,8 +381,12 @@ EOF;
 	
 	echo "</td></tr>";
 	
-   $ret = $database->query($sql);
-   while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+	if (!$result = $database->query($sql)) {
+    die ('There was an error running query[' . $database->error . ']');
+}
+
+
+   while($row = $result->fetch_array()) {
 	  echo "<tr><td style=\"word-wrap: break-word\"  ><font color=\"black\">";
       echo $row['scandate'];
 	  echo "</font></td>";
@@ -448,8 +488,12 @@ EOF;
 	echo "<B>MyIP</B>";
 	echo "</td></tr>";
 
-   $ret = $database->query($sql);
-   while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+	if (!$result = $database->query($sql)) {
+    die ('There was an error running query[' . $database->error . ']');
+}
+
+
+   while($row = $result->fetch_array()) {
 	  echo "<tr><td style=\"word-wrap: break-word\"  ><font color=\"black\">";
       echo $row['scandate'];
 	  echo "</font></td>";
@@ -532,8 +576,12 @@ EOF;
 	
 	echo "</td></tr>";
 	
-   $ret = $database->query($sql);
-   while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+	if (!$result = $database->query($sql)) {
+    die ('There was an error running query[' . $database->error . ']');
+}
+
+
+   while($row = $result->fetch_array()) {
 	  echo "<tr><td style=\"word-wrap: break-word\"  ><font color=\"black\">";
       echo $row['scandate'];
 	  echo "</font></td>";

@@ -7,7 +7,20 @@ import apilityio #requires pip install apility
 import hashlib
 import sqlite3
 import time
+import pymysql
 import pytz,sys
+
+
+print("start")
+
+con = pymysql.connect('us-cdbr-iron-east-02.cleardb.net', 'b37a2f3f419592', 
+    '814d61b9', 'heroku_d2727727c391dd6')
+cur = con.cursor()
+cur.execute("SELECT VERSION()")
+
+version = cur.fetchone()
+    
+print("Database version: {}".format(version[0]))
     
     
 def VirusTotal(ip):
@@ -272,12 +285,28 @@ def doWork(ip):
     print("susbool", susbool)
     print("checkedbool", checkedbool)
     
-    if ip == "129.71.200.66":
-        c.execute("INSERT INTO IP1 VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?);", (currentdate,virustotalurl,virustotalBool,virustotalnum,currentPorts,abuseurl,category,confidenceScore,confidenceBool,apilityBool,myipBool,checkedbool,susbool))
+    if ip == "129.71.200.66":    
+        
+        sql = "INSERT INTO IP1 (scandate,virustotalurl,virustotalbool,virustotalextra,shodanports,abuseipdburl,abuseipdbcats,abuseipdbscore,abuseipdbbool,apilitybool,myipbool,checkedbool,susbool) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
+        
+        cur.execute(sql,(currentdate,virustotalurl,virustotalBool,virustotalnum,currentPorts,abuseurl,category,confidenceScore,confidenceBool,apilityBool,myipBool,checkedbool,susbool))
+        con.commit()
+        
+        
+     #   cur.execute("INSERT INTO IP1 VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?);", (currentdate,virustotalurl,virustotalBool,virustotalnum,currentPorts,abuseurl,category,confidenceScore,confidenceBool,apilityBool,myipBool,checkedbool,susbool))
     if ip == "129.71.202.12":
-        c.execute("INSERT INTO IP2 VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?);", (currentdate,virustotalurl,virustotalBool,virustotalnum,currentPorts,abuseurl,category,confidenceScore,confidenceBool,apilityBool,myipBool,checkedbool,susbool))
+        sql = "INSERT INTO IP2 (scandate,virustotalurl,virustotalbool,virustotalextra,shodanports,abuseipdburl,abuseipdbcats,abuseipdbscore,abuseipdbbool,apilitybool,myipbool,checkedbool,susbool) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
+        
+        cur.execute(sql,(currentdate,virustotalurl,virustotalBool,virustotalnum,currentPorts,abuseurl,category,confidenceScore,confidenceBool,apilityBool,myipBool,checkedbool,susbool))
+        con.commit()        
+        
+       
     if ip == "129.71.252.10":   
-        c.execute("INSERT INTO IP3 VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?);", (currentdate,virustotalurl,virustotalBool,virustotalnum,currentPorts,abuseurl,category,confidenceScore,confidenceBool,apilityBool,myipBool,checkedbool,susbool))
+        sql = "INSERT INTO IP3 (scandate,virustotalurl,virustotalbool,virustotalextra,shodanports,abuseipdburl,abuseipdbcats,abuseipdbscore,abuseipdbbool,apilitybool,myipbool,checkedbool,susbool) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
+        
+        cur.execute(sql,(currentdate,virustotalurl,virustotalBool,virustotalnum,currentPorts,abuseurl,category,confidenceScore,confidenceBool,apilityBool,myipBool,checkedbool,susbool))
+        con.commit()             
+       
     
     
     conn.commit()
