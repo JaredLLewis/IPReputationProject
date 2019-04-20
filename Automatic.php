@@ -13,10 +13,6 @@ echo "HELLO";
 
 $username = getenv('USERNAME');
 $password = getenv('PASS');
-echo "USER: ";
-echo $username;
-echo "PASS: ";
-echo $password;
 $servername = "us-cdbr-iron-east-02.cleardb.net";
 
 // Create connection
@@ -360,7 +356,7 @@ EOF;
 	echo "<table border=\"1\" align=\"center\" width=\"100%\" style=\"table-layout: fixed\">";
 	echo "<tr>";
 	echo "<td colspan=\"7\" style=\"color:#333 \" bgcolor=\"#00AABB\"><B><center>";
-	echo "Malicious History of IP 129.71.200.66";
+	echo "Malicious History of IP 129.71.202.12";
 	echo "</center></B></td>";
 	echo"</tr>";
 	echo "<tr>";
@@ -555,7 +551,7 @@ EOF;
 	echo "<table border=\"1\" align=\"center\" width=\"100%\" style=\"table-layout: fixed\">";
 	echo "<tr>";
 	echo "<td colspan=\"7\" style=\"color:#333 \" bgcolor=\"#00AABB\"><B><center>";
-	echo "Malicious History of IP 129.71.200.66";
+	echo "Malicious History of IP 129.71.252.10";
 	echo "</center></B></td>";
 	echo"</tr>";
 	echo "<tr>";
