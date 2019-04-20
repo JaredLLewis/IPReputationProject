@@ -5,3 +5,4 @@ requests==2.11.1
 apilityio-lib==0.0.3
 pytz==2018.5
 PyMySQL==0.9.3
+shodan==1.10.3
