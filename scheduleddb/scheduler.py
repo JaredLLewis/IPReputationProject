@@ -9,12 +9,12 @@ import sqlite3
 import time
 import pymysql
 import pytz,sys
-
+import os
 
 print("start")
 
-con = pymysql.connect('us-cdbr-iron-east-02.cleardb.net', 'b37a2f3f419592', 
-    '814d61b9', 'heroku_d2727727c391dd6')
+con = pymysql.connect('us-cdbr-iron-east-02.cleardb.net', os.environ['USERNAME'], 
+    os.environ['PASS'], 'heroku_d2727727c391dd6')
 cur = con.cursor()
 cur.execute("SELECT VERSION()")
 
