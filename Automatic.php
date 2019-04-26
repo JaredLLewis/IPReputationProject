@@ -77,7 +77,7 @@ Days: <input type="text" name="name" style="width:100px;" value="<?php echo html
 	echo "<B>MyIP</B>";
 	echo "</td></tr>";
 	
-	$sql =    "SELECT * from IP1 ORDER  BY scandate DESC;";
+	$sql =    "SELECT * from IP1 ORDER  BY scandate DESC LIMIT 30;";
 	
 	if (!$result = $database->query($sql)) {
     die ('There was an error running query[' . $database->error . ']');
@@ -139,7 +139,7 @@ Days: <input type="text" name="name" style="width:100px;" value="<?php echo html
 
 
 $sql =<<<EOF
-      SELECT * from IP1 WHERE susbool="True" AND checkedbool ="False" ORDER  BY scandate DESC;
+      SELECT * from IP1 WHERE susbool="True" AND checkedbool ="False" ORDER  BY scandate DESC LIMIT 30;
 EOF;
 
 
@@ -266,7 +266,7 @@ $daycount = 0;
 	
 	
 	$sql =<<<EOF
-      SELECT * from IP2 ORDER  BY scandate DESC;
+      SELECT * from IP2 ORDER  BY scandate DESC LIMIT 30;
 EOF;
 	echo "<div class=\"normalTable\">";
 	echo "<table border=\"1\" align=\"center\" width=\"100%\" style=\"table-layout: fixed\">";
@@ -347,7 +347,7 @@ EOF;
 	echo "</div>";
    
  $sql =<<<EOF
-      SELECT * from IP2 WHERE susbool="True" AND checkedbool ="False" ORDER  BY scandate DESC;
+      SELECT * from IP2 WHERE susbool="True" AND checkedbool ="False" ORDER  BY scandate DESC LIMIT 30;
 EOF;
 
 
@@ -459,7 +459,7 @@ $daycount = 0;
 
 	
 		$sql =<<<EOF
-      SELECT * from IP3 ORDER  BY scandate DESC;
+      SELECT * from IP3 ORDER  BY scandate DESC LIMIT 30;
 EOF;
 	echo "<div class=\"normalTable\">";
 	echo "<table border=\"1\" align=\"center\" width=\"100%\" style=\"table-layout: fixed\">";
@@ -542,7 +542,7 @@ EOF;
 	echo "<br><br>";
 	
 	 $sql =<<<EOF
-      SELECT * from IP3 WHERE susbool="True" AND checkedbool ="False" ORDER  BY scandate DESC;
+      SELECT * from IP3 WHERE susbool="True" AND checkedbool ="False" ORDER  BY scandate DESC LIMIT 30;
 EOF;
 
 
